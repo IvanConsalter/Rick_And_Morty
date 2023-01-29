@@ -12,7 +12,10 @@
       {{ character.species }}
     </p>
     <p>
-      {{ character.status }}
+      <!-- TODO - RETORNAR TERCEIRO TIPO PARA UNKNOWN -->
+      <span
+        [ngClass]="character.status === 'Alive' ? 'circle-status-alive' : 'circle-status-dead'"
+      ></span> {{ character.status }}
     </p>
   </div>
 

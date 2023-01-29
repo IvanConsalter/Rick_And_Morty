@@ -34,5 +34,38 @@
     align-items: center;
     padding: .75rem 0;
     color: #424242;
+
+    // TODO - PESQUISAR COMO REAPROVEITAR COD NO SASS
+    & .circle-status-alive {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 10px;
+        background: green;
+        border-radius: 50%;
+      }
+    }
+
+    & .circle-status-dead {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 10px;
+        background: red;
+        border-radius: 50%;
+      }
+    }
   }
 }
