@@ -1,18 +1,18 @@
-<div class="card">
-  <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="" />
+<div class="card" *ngFor="let character of arrayCharacter">
+  <img src="{{ character.image }}" alt="" />
 
   <div class="name">
-    Rick Sanchez
+    {{ character.name }}
   </div>
 
   <div class="divider"></div>
 
-  <div class="type-status">
+  <div class="specie-status">
     <p>
-      Human
+      {{ character.species }}
     </p>
     <p>
-      Alive
+      {{ character.status }}
     </p>
   </div>
 
