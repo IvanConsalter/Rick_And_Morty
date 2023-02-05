@@ -35,37 +35,31 @@
     padding: .75rem 0;
     color: #424242;
 
-    // TODO - PESQUISAR COMO REAPROVEITAR COD NO SASS
-    & .circle-status-alive {
+    @mixin circle-status($background) {
       position: relative;
 
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         top: 50%;
         left: -20px;
         transform: translateY(-50%);
         width: 10px;
         height: 10px;
-        background: green;
+        background: $background;
         border-radius: 50%;
       }
     }
+    & .circle-status-alive {
+      @include circle-status(green);
+    }
 
     & .circle-status-dead {
-      position: relative;
+      @include circle-status(red);
+    }
 
-      &::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: -20px;
-        transform: translateY(-50%);
-        width: 10px;
-        height: 10px;
-        background: red;
-        border-radius: 50%;
-      }
+    & .circle-status-unknown {
+      @include circle-status(gray);
     }
   }
 }

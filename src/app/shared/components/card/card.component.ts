@@ -14,4 +14,11 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  checkStatus(status: string): string {
+    if(status === 'Alive') return 'circle-status-alive';
+    if(status === 'Dead') return 'circle-status-dead';
+
+    return 'circle-status-unknown';
+  }
+
 }

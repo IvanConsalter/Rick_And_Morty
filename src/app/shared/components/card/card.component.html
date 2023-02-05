@@ -14,7 +14,7 @@
     <p>
       <!-- TODO - RETORNAR TERCEIRO TIPO PARA UNKNOWN -->
       <span
-        [ngClass]="character.status === 'Alive' ? 'circle-status-alive' : 'circle-status-dead'"
+        [ngClass]="checkStatus(character.status)"
       ></span> {{ character.status }}
     </p>
   </div>
