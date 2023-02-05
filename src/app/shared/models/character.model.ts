@@ -1,3 +1,6 @@
+import { Location } from "./location.model";
+import { Origin } from "./origin.model";
+
 export interface ICharacter {
   id: number;
   name: string;
@@ -7,4 +10,7 @@ export interface ICharacter {
   gender: string;
   image: string;
   url: string;
+  location: Location;
+  origin: Origin;
+  episode: Array<string>;
 }
