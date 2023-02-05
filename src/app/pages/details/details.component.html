@@ -4,36 +4,36 @@
       <div class="character-info">
         <div class="character-info-image">
           <img
-            src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
-            alt="Rick Sanchez"
+            src="{{ character.image }}"
+            alt="{{ character.name }}"
           />
         </div>
         <div class="character-info-attr">
-          <h2>Rick Sanchez</h2>
+          <h2>{{ character.name }}</h2>
           <table>
             <tr>
               <td>Status:</td>
-              <td>Alive</td>
+              <td>{{ character.status }}</td>
             </tr>
             <tr>
               <td>Species:</td>
-              <td>Human</td>
+              <td>{{ character.species }}</td>
             </tr>
             <tr>
               <td>Type:</td>
-              <td>-</td>
+              <td>{{ character.type ? character.type : 'unknown' }}</td>
             </tr>
             <tr>
               <td>Gender:</td>
-              <td>Male</td>
+              <td>{{ character.gender }}</td>
             </tr>
             <tr>
               <td>Origin:</td>
-              <td>Earth (C-137)</td>
+              <td>{{ character.origin.name }}</td>
             </tr>
             <tr>
               <td>Location:</td>
-              <td>Citadel of Ricks</td>
+              <td>{{ character.location.name }}</td>
             </tr>
           </table>
         </div>
