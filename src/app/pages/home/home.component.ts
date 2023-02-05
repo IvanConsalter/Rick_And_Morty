@@ -1,6 +1,6 @@
+import { CharacterService } from './../../shared/services/character.service';
 import { Component, OnInit } from '@angular/core';
 import { ICharacter } from 'src/app/shared/models/character.model';
-import { HomeService } from '../home.service';
 
 @Component({
   selector: 'app-home',
@@ -11,14 +11,14 @@ export class HomeComponent implements OnInit {
 
   arrayCharacter: Array<ICharacter> = [];
 
-  constructor(private homeService: HomeService) { }
+  constructor(private characterService: CharacterService) { }
 
   ngOnInit(): void {
     this.getAllCharacter();
   }
 
   getAllCharacter(): void {
-    this.homeService.getAllCharacter()
+    this.characterService.getAll()
       .subscribe( (res) => {
         this.arrayCharacter = res.results;
       },
