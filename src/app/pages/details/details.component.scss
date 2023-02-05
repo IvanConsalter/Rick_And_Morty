@@ -1,0 +1,32 @@
+.character {
+
+  &-info {
+    display: flex;
+    justify-content: center;
+
+    &-attr {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 1rem;
+
+      & > * {
+        margin: 1rem 0;
+      }
+
+      & table {
+
+        & td {
+          padding: .5rem 0;
+        }
+      }
+    }
+  }
+
+  &-episodes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
