@@ -8,6 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { CardComponent } from './shared/components/card/card.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { AccordionComponent } from './shared/components/accordion/accordion.component';
 
 @NgModule({
   declarations: [
@@ -15,13 +16,14 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
     HomeComponent,
     CardComponent,
     DetailsComponent,
-    NavbarComponent
+    NavbarComponent,
+    AccordionComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
 
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

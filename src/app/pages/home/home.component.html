@@ -1,5 +1,13 @@
 <div class="container">
   <div class="content">
+
+    <div style="width: 100%;">
+      <app-accordion title="Título do Accordion">
+        <!-- Conteúdo do accordion aqui -->
+        <p>Este é o conteúdo do accordion!</p>
+      </app-accordion>
+    </div>
+
     <app-card
       *ngFor="let character of arrayCharacter"
       [character]="character"
